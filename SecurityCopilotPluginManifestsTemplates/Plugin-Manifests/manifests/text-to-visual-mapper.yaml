@@ -1,0 +1,20 @@
+Descriptor:
+  Name: text-to-visual-mapper
+  DisplayName: Text-to-Visual Mapper
+  Description: Converts incident summaries into visual diagrams or flowcharts.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/text-to-visual/openapi.yaml
+    Skills:
+      - Description: Generate a flowchart from plain text
+        Inputs:
+          - Name: text
+            Description: Incident summary text
+            Required: true
+      - Description: Export diagram to PNG URL
+        Inputs:
+          - Name: diagram_definition
+            Description: Graphviz or Mermaid syntax
+            Required: true

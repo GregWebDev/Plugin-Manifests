@@ -1,0 +1,20 @@
+Descriptor:
+  Name: whois-lookup
+  DisplayName: Whois Lookup
+  Description: Retrieves WHOIS registration and ownership metadata for domains and IPs.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/whois/openapi.yaml
+    Skills:
+      - Description: Get WHOIS data for a domain
+        Inputs:
+          - Name: domain
+            Description: Domain name to query
+            Required: true
+      - Description: Get WHOIS data for an IP address
+        Inputs:
+          - Name: ip
+            Description: IP address to query
+            Required: true

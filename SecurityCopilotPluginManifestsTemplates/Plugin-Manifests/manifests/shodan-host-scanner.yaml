@@ -1,0 +1,20 @@
+Descriptor:
+  Name: shodan-host-scanner
+  DisplayName: Shodan Host Scanner
+  Description: Queries Shodan for exposed services and known vulnerabilities on a host.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/shodan/openapi.yaml
+    Skills:
+      - Description: Scan an IP address for open ports and services
+        Inputs:
+          - Name: ip
+            Description: IP address to scan
+            Required: true
+      - Description: Retrieve vulnerability data for a host
+        Inputs:
+          - Name: ip
+            Description: IP address to analyze
+            Required: true

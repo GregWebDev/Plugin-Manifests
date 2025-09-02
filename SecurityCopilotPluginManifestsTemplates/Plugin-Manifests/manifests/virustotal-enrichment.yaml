@@ -1,0 +1,20 @@
+Descriptor:
+  Name: virustotal-enrichment
+  DisplayName: VirusTotal Enrichment
+  Description: Enrich IPs, URLs, and file hashes using VirusTotal reputation data.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/virustotal/openapi.yaml
+    Skills:
+      - Description: Get reputation data for an IP address
+        Inputs:
+          - Name: ip
+            Description: IP address to check
+            Required: true
+      - Description: Get reputation data for a file hash
+        Inputs:
+          - Name: hash
+            Description: SHA256 or MD5 file hash
+            Required: true

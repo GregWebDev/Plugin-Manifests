@@ -1,0 +1,23 @@
+Descriptor:
+  Name: scp-action-executor
+  DisplayName: SCP Action Executor
+  Description: Executes predefined remediation actions via Sentinel playbooks.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/scp-action-executor/openapi.yaml
+    Skills:
+      - Description: Execute a remediation action
+        Inputs:
+          - Name: playbook_id
+            Description: Sentinel playbook identifier
+            Required: true
+          - Name: incident_id
+            Description: Sentinel incident identifier
+            Required: true
+      - Description: Roll back a remediation action
+        Inputs:
+          - Name: action_id
+            Description: Remediation action identifier
+            Required: true

@@ -1,0 +1,20 @@
+Descriptor:
+  Name: network-anomaly-detector
+  DisplayName: Network Anomaly Detector
+  Description: Flags unusual traffic patterns using NetFlow or PCAP data analysis.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/network-anomaly/openapi.yaml
+    Skills:
+      - Description: Analyze NetFlow data for anomalies
+        Inputs:
+          - Name: netflow
+            Description: NetFlow JSON or CSV data
+            Required: true
+      - Description: Detect port scan events in PCAP
+        Inputs:
+          - Name: pcap
+            Description: Base64-encoded PCAP file
+            Required: true

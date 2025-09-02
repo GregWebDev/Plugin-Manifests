@@ -1,0 +1,20 @@
+Descriptor:
+  Name: kql-migrator
+  DisplayName: KQL Migrator
+  Description: Converts legacy or SQL-style queries into Azure Sentinel–compatible KQL.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/kql-migrator/openapi.yaml
+    Skills:
+      - Description: Translate SQL to KQL query
+        Inputs:
+          - Name: sql_query
+            Description: SQL or legacy query text
+            Required: true
+      - Description: Optimize a KQL query for performance
+        Inputs:
+          - Name: kql_query
+            Description: KQL query to optimize
+            Required: true

@@ -1,0 +1,20 @@
+Descriptor:
+  Name: proofpoint-syslog-parser
+  DisplayName: Proofpoint Syslog Parser
+  Description: Parses Proofpoint syslog entries for phishing and malware indicators.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/proofpoint/openapi.yaml
+    Skills:
+      - Description: Parse syslog lines for phishing events
+        Inputs:
+          - Name: logs
+            Description: Raw syslog text
+            Required: true
+      - Description: Extract malicious URLs from syslog entries
+        Inputs:
+          - Name: logs
+            Description: Raw syslog text
+            Required: true

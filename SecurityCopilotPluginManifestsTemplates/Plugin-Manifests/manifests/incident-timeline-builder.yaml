@@ -1,0 +1,20 @@
+Descriptor:
+  Name: incident-timeline-builder
+  DisplayName: Incident Timeline Builder
+  Description: Constructs chronological event timelines from Sentinel incident data.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/incident-timeline/openapi.yaml
+    Skills:
+      - Description: Build timeline from Sentinel incident ID
+        Inputs:
+          - Name: incident_id
+            Description: Sentinel incident identifier
+            Required: true
+      - Description: Export timeline as markdown report
+        Inputs:
+          - Name: incident_id
+            Description: Sentinel incident identifier
+            Required: true

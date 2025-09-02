@@ -1,0 +1,17 @@
+Descriptor:
+  Name: mfa-audit
+  DisplayName: MFA Audit Plugin
+  Description: Audits MFA status across Entra ID users and flags gaps.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/mfa-audit/openapi.yaml
+    Skills:
+      - Description: Check MFA status for a user
+        Inputs:
+          - Name: user_principal_name
+            Description: User UPN or object ID
+            Required: true
+      - Description: List users without MFA enabled
+        Inputs: []

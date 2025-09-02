@@ -1,0 +1,20 @@
+Descriptor:
+  Name: qradar-aql-translator
+  DisplayName: QRadar AQL Translator
+  Description: Converts natural language descriptions into QRadar AQL queries.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/qradar-aql/openapi.yaml
+    Skills:
+      - Description: Translate natural language to AQL query
+        Inputs:
+          - Name: description
+            Description: Plain-text query description
+            Required: true
+      - Description: Optimize an AQL query for performance
+        Inputs:
+          - Name: aql
+            Description: AQL query text
+            Required: true

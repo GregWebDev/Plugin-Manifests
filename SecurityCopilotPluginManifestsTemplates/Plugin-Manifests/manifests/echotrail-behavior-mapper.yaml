@@ -1,0 +1,20 @@
+Descriptor:
+  Name: echotrail-behavior-mapper
+  DisplayName: EchoTrail Behavior Mapper
+  Description: Maps execution chains and process trees to known behavioral patterns.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/echotrail/openapi.yaml
+    Skills:
+      - Description: Map a process execution chain to ATT&CK behaviors
+        Inputs:
+          - Name: execution_chain
+            Description: JSON list of processes and parents
+            Required: true
+      - Description: Correlate events to known threat behaviors
+        Inputs:
+          - Name: events
+            Description: Event log entries in JSON
+            Required: true

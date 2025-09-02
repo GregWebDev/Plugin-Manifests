@@ -1,0 +1,20 @@
+Descriptor:
+  Name: nl2logicapp-generator
+  DisplayName: NL2LogicApp Generator
+  Description: Converts natural-language descriptions into Azure Logic Apps workflows.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/nl2logicapp/openapi.yaml
+    Skills:
+      - Description: Generate Logic App definition from description
+        Inputs:
+          - Name: description
+            Description: Plain-text workflow description
+            Required: true
+      - Description: Validate an Azure Logic App definition
+        Inputs:
+          - Name: logicapp_json
+            Description: JSON definition of Logic App
+            Required: true

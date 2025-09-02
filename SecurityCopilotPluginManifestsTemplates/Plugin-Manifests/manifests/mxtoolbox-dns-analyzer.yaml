@@ -1,0 +1,20 @@
+Descriptor:
+  Name: mxtoolbox-dns-analyzer
+  DisplayName: MXToolbox DNS Analyzer
+  Description: Checks domain reputation, MX records, and blacklist status via MXToolbox API.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/mxtoolbox/openapi.yaml
+    Skills:
+      - Description: Check domain reputation and blacklist status
+        Inputs:
+          - Name: domain
+            Description: Domain name to check
+            Required: true
+      - Description: Retrieve MX records for a domain
+        Inputs:
+          - Name: domain
+            Description: Domain name to query
+            Required: true

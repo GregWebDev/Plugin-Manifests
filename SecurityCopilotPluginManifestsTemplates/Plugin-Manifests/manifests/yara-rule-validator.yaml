@@ -1,0 +1,23 @@
+Descriptor:
+  Name: yara-rule-validator
+  DisplayName: YARA Rule Validator
+  Description: Validates and tests YARA rules against sample payloads.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/yara-validator/openapi.yaml
+    Skills:
+      - Description: Validate a YARA rule syntax
+        Inputs:
+          - Name: rule
+            Description: YARA rule text
+            Required: true
+      - Description: Test a YARA rule against a sample payload
+        Inputs:
+          - Name: rule
+            Description: YARA rule text
+            Required: true
+          - Name: sample
+            Description: Base64-encoded sample payload
+            Required: true

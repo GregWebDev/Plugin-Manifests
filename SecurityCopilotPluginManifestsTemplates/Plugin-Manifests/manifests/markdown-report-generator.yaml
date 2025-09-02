@@ -1,0 +1,20 @@
+Descriptor:
+  Name: markdown-report-generator
+  DisplayName: Markdown Report Generator
+  Description: Outputs investigation summaries in markdown format for documentation or Issues.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/markdown-report-generator/openapi.yaml
+    Skills:
+      - Description: Generate a markdown report from summary text
+        Inputs:
+          - Name: summary
+            Description: Plain-text investigation summary
+            Required: true
+      - Description: Apply a custom markdown template
+        Inputs:
+          - Name: template_id
+            Description: Template identifier or path
+            Required: true

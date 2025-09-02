@@ -1,0 +1,20 @@
+Descriptor:
+  Name: abuseipdb-checker
+  DisplayName: AbuseIPDB Reputation Checker
+  Description: Scores IP addresses based on community abuse reports from AbuseIPDB.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/abuseipdb/openapi.yaml
+    Skills:
+      - Description: Get abuse report score for an IP address
+        Inputs:
+          - Name: ip
+            Description: IP address to check
+            Required: true
+      - Description: Retrieve recent abuse reports for an IP
+        Inputs:
+          - Name: ip
+            Description: IP address to query
+            Required: true

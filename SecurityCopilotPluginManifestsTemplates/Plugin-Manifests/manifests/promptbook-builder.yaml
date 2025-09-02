@@ -1,0 +1,20 @@
+Descriptor:
+  Name: promptbook-builder
+  DisplayName: Promptbook Builder
+  Description: Converts a Copilot session history into a structured promptbook with tags.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/promptbook-builder/openapi.yaml
+    Skills:
+      - Description: Build a promptbook from session history
+        Inputs:
+          - Name: session_id
+            Description: Copilot session identifier
+            Required: true
+      - Description: List promptbook sections and metadata
+        Inputs:
+          - Name: promptbook_id
+            Description: Promptbook identifier
+            Required: true

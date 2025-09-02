@@ -1,0 +1,23 @@
+Descriptor:
+  Name: scenario-generator
+  DisplayName: Scenario Generator Plugin
+  Description: Builds YAML-based attack simulations from user input parameters.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://example.com/scenario-generator/openapi.yaml
+    Skills:
+      - Description: Generate an attack scenario template
+        Inputs:
+          - Name: scenario_name
+            Description: Descriptive name for the scenario
+            Required: true
+          - Name: parameters
+            Description: JSON object of scenario parameters
+            Required: true
+      - Description: Validate a scenario YAML file
+        Inputs:
+          - Name: yaml_content
+            Description: Scenario definition in YAML
+            Required: true
